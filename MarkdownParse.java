@@ -17,6 +17,12 @@ public class MarkdownParse {
                 // no new open bracket
                 break;
             }
+            if(openBracket > 0) {
+                if (markdown.charAt(openBracket - 1) == '!') {
+                    currentIndex = openBracket + 1;
+                    continue;
+                }
+            }
             int closeBracket = markdown.indexOf("]", openBracket);
             int newLine = markdown.indexOf("\n", openBracket);
             // if no new close bracket
