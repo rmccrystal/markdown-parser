@@ -19,7 +19,42 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void testTestFile() {
+    public void testFile1() {
         assertMarkdown(Path.of("test-file.md"), List.of("https://something.com", "some-thing.html"));
+    }
+
+    @Test
+    public void testFile2() {
+        assertMarkdown(Path.of("test-file2.md"), List.of("https://something.com", "some-page.html"));
+    }
+
+    @Test
+    public void testFile3() {
+        assertMarkdown(Path.of("test-file3.md"), List.of());
+    }
+
+    @Test
+    public void testFile4() {
+        assertMarkdown(Path.of("test-file4.md"), List.of());
+    }
+
+    @Test
+    public void testFile5() {
+        assertMarkdown(Path.of("test-file5.md"), List.of());
+    }
+
+    @Test
+    public void testFile6() {
+        assertMarkdown(Path.of("test-file6.md"), List.of());
+    }
+
+    @Test
+    public void testFile7() {
+        assertMarkdown(Path.of("test-file7.md"), List.of());
+    }
+
+    @Test
+    public void testFile8() {
+        assertMarkdown(Path.of("test-file8.md"), List.of("a link on the first line"));
     }
 }
