@@ -19,6 +19,11 @@ public class MarkdownParseTest {
     }
 
     @Test
+    public void failingTest() {
+        assertEquals(1, 2);
+    }
+
+    @Test
     public void testFile1() {
         assertMarkdown(Path.of("test-file.md"), List.of("https://something.com", "some-thing.html"));
     }
